@@ -2,10 +2,10 @@
 
 namespace kriss\qiniu;
 
-use Codeception\Exception\ConfigurationException;
 use League\Flysystem\Filesystem;
 use Overtrue\Flysystem\Qiniu\QiniuAdapter;
 use yii\base\Component;
+use yii\base\InvalidConfigException;
 
 class QiNiuComponent extends Component
 {
@@ -51,13 +51,13 @@ class QiNiuComponent extends Component
 
     /**
      * @param $params array
-     * @throws ConfigurationException
+     * @throws InvalidConfigException
      */
     protected function configCanNotBeNull($params)
     {
         foreach ($params as $param) {
             if (!$this->$param) {
-                throw new ConfigurationException($param . 'must be set');
+                throw new InvalidConfigException($param . 'must be set');
             }
         }
     }
