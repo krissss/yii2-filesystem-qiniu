@@ -1,3 +1,5 @@
+**important:** this project is deprecated, use [kriss/yii2-flysystem](https://github.com/krissss/yii2-flysystem) instead
+
 Yii2 filesystem Qiniu
 =====================
 [Qiniu](http://www.qiniu.com/) storage for Laravel based on [overtrue/flysystem-qiniu](https://github.com/overtrue/flysystem-qiniu).
